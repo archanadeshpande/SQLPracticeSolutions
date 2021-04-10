@@ -15,6 +15,6 @@ update set
 --deleting the deleted rows
 delete where s1.match_flag = 'Y'
 when not matched then
---inserting the new rows
+--inserting the new rows in target
   insert 
 values (curr.EMPLOYEE_ID,curr.FIRST_NAME,curr.LAST_NAME,curr.EMAIL,curr.PHONE_NUMBER,curr.HIRE_DATE,curr.JOB_ID,curr.SALARY,curr.COMMISSION_PCT,curr.MANAGER_ID,curr.DEPARTMENT_ID,sysdate,curr.match_flag);
